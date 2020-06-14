@@ -34,6 +34,7 @@ public class PaymentController {
     public CommonResult insert(@RequestBody Payment payment){
         int result = paymentService.insert(payment);
         if (result > 0){
+            System.out.println("test");
             return new CommonResult(200,"success",payment);
         }else{
             return new CommonResult(500,"error");
